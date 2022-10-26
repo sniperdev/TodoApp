@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const mysql = require("mysql");
 const connection = mysql.createConnection({
@@ -8,9 +8,6 @@ const connection = mysql.createConnection({
   user: "root",
   password: "",
   database: "todolist",
-});
-app.get("/", (req, res) => {
-  res.send("Welcome");
 });
 
 app.listen(port, () => {
